@@ -17,7 +17,9 @@ V = []   # This is the set of nodes visited by the searchers
 N = [[0.5, 0.5, 0.0], [0.3,0.3,0.3], [0.0, 0.5, 0.5]]
 N_mat = np.matrix(N)
 print (N_mat)
-'''def __init__ (self, searcher):
+def __init__ (self, searcher):
      self.searcher = searcher
 def captured (searcher):
-    for k in range(0,2): '''
+    for k in range(0,2):
+
+        
