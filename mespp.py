@@ -20,6 +20,8 @@ print (N_mat)
 def __init__ (self, searcher):
      self.searcher = searcher
 def captured (searcher):
-    for k in range(0,2):
-
-        
+    for k in range(0,len(searcher)):
+        Ak = []
+        if j not in Ak:
+            Ak.append(j)
+            if Ak
