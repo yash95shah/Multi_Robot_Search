@@ -22,8 +22,10 @@ neighbors = lambda x, y : [(x2, y2) for x2 in range(x-1, x+2)
                                        (0 <= y2 <= Y))]
 
 """
+
    Function:-manhattan_distance calculates the distance between a given node and a corresponding node.
    The absolute difference between the x and the y coordinates is calculated and returned to the called function.
+
 """
 
 def manhattan_distance (start,neigh):
@@ -32,7 +34,9 @@ def manhattan_distance (start,neigh):
 
 
 """
-    Function:- choose_neighbor will take into consideration all the possible neighbors of the given node and will perform calculations o
+    Function:- choose_neighbor will take into consideration all the possible neighbors of the given node and will perform
+    calculations to choose the neighbor which gives the minimum value of the function f.
+
 """
 
 def choose_neighbor(start):
@@ -53,9 +57,9 @@ def choose_neighbor(start):
     #print "Its here too twice"
 
     #calculations for temp1
-    f1 = manhattan_distance(start,temp1)+ h[temp2[0]][temp2[0]]
+    f1 = manhattan_distance(start,temp1)+ (h[temp2[0]][temp2[0]])
     #calculations for temp2
-    f2 = manhattan_distance(start,temp2) + h[temp2[0]][temp2[1]]
+    f2 = (manhattan_distance(start,temp2) + h[temp2[0]][temp2[1]])
     #calculations for temp3
     f3 = manhattan_distance(start,temp3) + h[temp3[0]][temp3[1]]
 
@@ -71,7 +75,11 @@ def choose_neighbor(start):
         temp = temp3
     return temp
 
+"""
+Function update_heuristic will actually make the update to the heuristic function.
+This is the result of the adaptive A*
 
+"""
 
 def update_heuristic(path):
     for j in range(len(path)):
@@ -84,7 +92,10 @@ def update_heuristic(path):
         #print h
     return h
 
+"""
+Function a_star will choose the appropriate path to be chosen and will return the chosen.
 
+"""
 def a_star(start, goal):
     frontier = []
     path = []
